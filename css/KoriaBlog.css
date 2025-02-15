@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-shrink: 0;
+    width: 100vw;
+    height: auto;
+    background-color: transparent;
+}
+
+.logo{
+    margin: 5%;
+}
+
+.logo-text{
+    color: #222222;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    margin-bottom: 1%;
+}
+
+.logo-text-top{
+    font-size: 34px;
+}
+
+.logo-text-middle{
+    font-size: 37.5px;
+}
+
+.logo-text-bottom{
+    font-size: 30px;
+}
+
+.header-right{
+    margin-top: 10%;
+}
+
+.header-text{
+    font-size: 20px;
+    margin: 0 20px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+.all-flex{
+    display: flex;
+    width: 600vw;
+    height: 100vh;
+    overflow-x: auto;  /* 横スクロールを可能にする */
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.zero-day{
+    position: relative;
+    background-color: #f7f8f6;
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.explain{
+    width: auto;
+    height: auto;
+    margin: 0 12%;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+svg{
+    position: absolute;
+    bottom: -5vw;
+}
+
+.planePath {
+    stroke: #D9DADA;
+    stroke-width: .1%;
+    stroke-width: .5%;
+    stroke-dasharray: 1% 2%;
+    stroke-linecap: round;
+    fill: none;
+}
+  
+.fil1 {
+    fill: #D9DADA;
+}
+  
+.fil2 {
+    fill: #C5C6C6;
+}
+  
+.fil4 {
+    fill: #9D9E9E;
+}
+  
+.fil3 {
+    fill: #AEAFB0;
+}
+
+.first-day{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f7f8f6;
+    flex-shrink: 0;
+}
+
+.title{
+    font-size: 3rem;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    color: #222222;
+    font-family: "Handlee", serif;
+    margin: 5%;
+}
+
+.go{
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    margin-left: 10vw;
+}
+
+
+
+.departure-img{
+    width: 65%;
+    max-width: 440px;
+    height: fit-content;
+}
+
+.departure-t{
+    width: 600px;
+    margin-left: 10%;
+    margin-top: 30%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+}
+
+.sentence{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    color: #222222;
+}
+
+.sentence-time{
+    font-size: 1rem;
+}
+
+.sentence-title{
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.sentence-text{
+    font-size: 1rem;
+}
+
+.welcom-img{
+    position: absolute;
+    width: 30%;
+    top: 5%;
+    right: 5%;
+}
+
+.first-day-2{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f7f8f6;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.arrive-t{
+    width: 340px;
+    position: absolute;
+    top: 7%;
+    left: 5%;
+}
+
+.move{
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    margin-left: 10%;
+}
+
+.train-img{
+    width: 35%;
+    height: fit-content;
+}
+
+.hotel-arrive-t{
+    width: 450px;
+    margin-left: 10%;
+    margin-top: 3%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+}
+
+.mirror-img{
+    width: 15%;
+    position: absolute;
+    right: 15%;
+    top: 7%;
+}
+
+.first-day-3{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f7f8f6;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+
+
+.second-day-0{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(247,248,246);
+background: linear-gradient(90deg, rgba(247,248,246,1) 0%, rgba(200,200,200,1) 40%, rgba(34,34,34,1) 100%);
+
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+
+.second-day-1{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222;
+    flex-shrink: 0;
+    overflow: hidden;
+}
