@@ -34,3 +34,258 @@
     <div class="gender-text">※男性が青、女性がピンクという固定観念があるわけではなく、ただのデザインです。うぇぶちーむは、多様性を重んじています。</div>
     <div class="circle"></div>
 </body>
+
+<style>
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.center-title{
+    position: absolute;
+    z-index: 3;
+    color: #353535;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    padding-bottom: 3%;
+    font-family: "Montserrat", serif;
+}
+
+.center-text{
+    position: absolute;
+    z-index: 3;
+    color: #353535;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    padding-top: 4%;
+    font-family: "Montserrat", serif;
+}
+
+.left-top{
+    position: absolute;
+    background-color: #336d91;
+    width: 50vw;
+    height: 50vh;
+}
+
+.left-middle{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent transparent #4d6395;
+    border-width: 50vh 0px 50vh 50vw;
+}
+
+.left-bottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #464a6b;
+    width: 50vw;
+    height: 50vh;
+}
+
+.right-top{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #f77874;
+    width: 50vw;
+    height: 50vh;
+}
+
+.right-middle{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent #f45b56 transparent transparent;
+    border-width: 50vh 50vw 50vh 0vw;
+}
+
+.right-bottom{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #ec4f4f;
+    width: 50vw;
+    height: 50vh;
+}
+
+.text{
+    position: absolute;
+    z-index: 3;
+    font-size: 1.5rem;
+    color: #e4d2d2;
+    font-family: "Montserrat", serif;
+    transition: 0.6s;
+}
+
+.text:hover{
+    font-size: 1.6rem;
+}
+
+.left-top-text{
+    position: absolute;
+    transform: translate(30vw,15vh);
+}
+
+.left-middle-text{
+    top: 50%;
+    left: 25%;
+    transform: translate(-35vw, -50%);
+    text-decoration: none;
+    width: 20vw;
+}
+
+.left-bottom-text{
+    transform: translate(30vw,30vh);
+}
+
+.right-top-text{
+    transform: translate(7vw,16vh);
+}
+
+.right-middle-text{
+    transform: translate(18vw,-1vh);
+    width: 20vw;
+}
+
+.right-bottom-text{
+    transform: translate(7vw,30vh);
+}
+
+.gender-text{
+    position: absolute;
+    z-index: 4;
+    right: 1%;
+    bottom: 3%;
+    font-size: 0.7rem;
+    color: #e4d2d2;
+    font-family: "Zen Kaku Gothic New", serif;
+}
+
+.circle{
+    position: absolute;
+    z-index: 2;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background-color: #e4d2d2;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1200px){
+    .text{
+        font-size: 1rem;
+    }
+
+    .text:hover{
+        font-size: 1.1rem;
+    }
+
+    .center-title{
+        font-size: 1.3rem;
+        color: #e4d2d2;
+    }
+
+    .center-text{
+        font-size: 0.7rem;
+        color: #e4d2d2;
+    }
+
+    .circle{
+        width: 40vw;
+        height: 40vw;
+        visibility: hidden;
+    }
+
+}
+
+@media (max-width: 767px){
+    body{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .circle{
+        width: 40vw;
+        height: 40vw;
+        visibility: hidden;
+    }
+
+    .center-title{
+        font-size: 1.3rem;
+        color: #e4d2d2;
+    }
+
+    .center-text{
+        font-size: 0.7rem;
+        margin-top: 4%;
+        color: #e4d2d2;
+    }
+
+    .text{
+        font-size: 1rem;
+    }
+
+    .text:hover{
+        font-size: 1.1rem;
+    }
+
+    .left-top-text{
+        transform: rotate(65deg);
+        top: 35%;
+        left: 38%;
+    }
+
+    .left-middle-text{
+        margin-left: -15px;
+    }
+
+    .left-bottom-text{
+        transform: rotate(-65deg);
+        bottom: 35%;
+        left: 38%;
+    }
+
+    .right-top-text{
+        transform: rotate(-65deg);
+        top: 35%;
+        right: 38%;
+    }
+
+    .right-middle-text{
+        margin-left: 15px;
+    }
+
+    .right-bottom-text{
+        transform: rotate(65deg);
+        bottom: 35%;
+        right: 40%;
+    }
+
+    .gender-text{
+        margin: 0 5%;
+        font-size: 0.5rem;
+        right: 0;
+    }
+}
+</style>
