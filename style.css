@@ -142,6 +142,15 @@ body{
 .sp-br{
     display: none;
 }
+.question-box-container{
+    margin-top: 100px;
+    text-align: center;
+}
+.question-box-container h2{
+    font-size: 50px;
+    margin: 30px 0;
+    color: #E9EFD3;
+}
 /* スマホ版 */
 @media (max-width:500px){
     .sensence-container{
