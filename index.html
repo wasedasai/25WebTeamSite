@@ -85,6 +85,97 @@
         <h2>問</h2>
         <h2>箱</h2>
     </section>
+    <section class="questions">
+        <div class="question-box">
+
+         <form action="https://docs.google.com/forms/d/e/1FAIpQLSflcGt6HJfZlONZlqSTuhwyMjqsKk4348BTTXocIB_m6SSwBw/formResponse" target="hidden_iframe" method="post" onsubmit="return test(this.wcheck.value)">
+          <div class="OneElement">
+            <div class="koumoku">ニックネーム　　</div>
+            <p><input name="entry.876649221" placeholder="うぇぶた" required></p>
+          </div>
+          <div class="OneElement">
+            <div class="koumoku">学年　　　　　　</div>
+            <p class="radio-buttons">
+              <label class="radio-label">
+                <input type="radio" name="entry.1089839963" value="新規" required> 新規
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="entry.1089839963" value="既存" required> 既存
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="entry.1089839963" value="3年目" required> 3年目
+              </label>
+            </p>
+            
+          </div>
+          <div class="OneElement">
+            <div class="koumoku">ご質問内容　　　</div>
+            <p><textarea name="entry.340043609" placeholder="ご自由にお書きください" rows="10" cols="40" maxlength="400" id="wcheck" required></textarea></p>
+          </div>
+          <!-- <p><input name="entry.1208260763" placeholder="メールアドレス" type="email"></p> -->
+          
+          <div class="question-btn-box">
+          <input type="submit" id="submitbutton" value="送信する">  
+          </div>
+          
+          </form> 
+          <div class="attention">
+            ※すべてのご質問にお答えできない場合がございます。ご了承ください。<br>
+            ※ご質問へのお答えは、Instagramのチームアカウントのストーリーにて行う予定です。<br class="pc">
+            フォローしてお待ちください。
+          </div>
+        </div>
+                
+       </section>
+        <!-- よくわからないものの消しては行けなさそうでした。 -->
+          <iframe onload='if(submitted){window.location="";}' id=hidden_iframe name=hidden_iframe style=display:none></iframe>
+          
+          <script type="text/javascript">
+          var NGComments = ["死ね","バカ",".exe"]; // 簡易的なNGワードの設定
+          var regex = new RegExp(NGComments.join("|"));
+          function test(wcheck) {
+              if (wcheck.match(regex) != null) {
+                  alert("ERROR: コメントにNGワードが含まれています");
+                  return false;
+              }
+              document.getElementById("submitbutton").disabled = true;
+              textareas = document.getElementsByTagName('textarea');
+              for(var i=0 ;i < textareas.length ;i ++ ){
+                  textareas[i].value = textareas[i].value.replace( /</g ,'&lt;' );
+              }
+              inputs = document.getElementsByTagName('input');
+              for(var i=0 ;i < inputs.length ;i ++ ){
+                  inputs[i].value = inputs[i].value.replace( /</g ,'&lt;' );
+              }
+              return submitted=!0;
+          }
+          </script>
+          <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<!-- <div id="comments"></div> -->
+<script>
+d3.csv("https://docs.google.com/spreadsheets/d/1SESAYBASYaFC7n1ew9SqWVXmsb83Px-QGdWCEDzXA3A/export?format=csv&range=A3:D", function(error, data) {
+  var text = "";
+  for (var i = 0; i < data.length; i++) {
+      text += `
+          <div class="comment">
+              <div class="comment-header">
+                  ${i + 1} 名前: <a href="mailto:${data[i].Mail}">${data[i].Name}</a>
+                  <span class="timestamp">${data[i].Timestamp}</span>
+              </div>
+              <pre class="comment-body">${data[i].Comments}</pre>
+          </div>`;
+  }
+  d3.select("#comments").html(text);
+});
+
+
+</script>
+
+
+
+  </main>
+
+  <script src="script.js"></script> <!-- 外部JavaScriptファイルを指定する場合 -->
     <div class="footer"><p>©25Webteam</p></div>
 </body>
 </html>

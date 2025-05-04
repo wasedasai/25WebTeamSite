@@ -170,3 +170,275 @@ body{
         margin-top: 70px;
     }
 }
+
+/* ---質問箱--- */
+
+.questions {
+    background-color: #4cafeb;
+    border-radius: 0;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+.question-box {
+    width: 1032px;
+    border: 2px solid #ffffff;
+margin: 0 auto;
+padding-top: 100px;
+}
+.OneElement {
+    display: flex;
+    margin-bottom: 80px;
+}
+.koumoku {
+    /* background-color: #4CAF50; */
+    height: 61px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 32px;
+    /* margin-right: 100px;
+    margin-left: 50px; */
+    margin-left: 100px;
+}
+/* メインコンテンツ */
+main {
+    margin: 20px 0; /* 上下の余白 */
+}
+
+
+input[name="entry.876649221"] {
+    width: 614px; /* 幅を100%に設定 */
+    height: 65px;
+    padding: 10px; /* 内側の余白 */
+    font-size: 20px; /* 文字サイズ */
+    border: 1px solid #ffffff; /* ボーダーの色と太さ */
+    background-color: #4cafeb;
+    color: #ffffff;
+    box-sizing: border-box; /* パディングとボーダーを含む幅 */
+  }
+/* フォーカス時のスタイル（ユーザーがクリックした時） */
+input[name="entry.876649221"]:focus {
+    outline: none; /* フォーカス時の青いアウトラインを消す */
+  }
+
+  /* プレースホルダーのスタイル */
+  input[name="entry.876649221"]::placeholder {
+    color: #cfe9fa; /* プレースホルダー文字色 */
+    background-color: #4cafeb;
+  }
+
+  input[name="entry.1208260763"] {
+    width: 614px; /* 幅を100%に設定 */
+    height: 65px;
+    padding: 10px; /* 内側の余白 */
+    font-size: 20px; /* 文字サイズ */
+    border: 1px solid #ffffff; /* ボーダーの色と太さ */
+    background-color: #4cafeb;
+    color: #ffffff;
+    box-sizing: border-box; /* パディングとボーダーを含む幅 */
+  }
+/* フォーカス時のスタイル（ユーザーがクリックした時） */
+input[name="entry.entry.1208260763"]:focus {
+    outline: none; /* フォーカス時の青いアウトラインを消す */
+  }
+
+  /* プレースホルダーのスタイル */
+  input[name="entry.1208260763"]::placeholder {
+    color: #cfe9fa; /* プレースホルダー文字色 */
+    background-color: #4cafeb;
+  }
+
+  textarea[name="entry.340043609"] {
+    width: 614px; /* 幅を100%に設定 */
+    height: 190px;
+    padding: 10px; /* 内側の余白 */
+    font-size: 20px; /* 文字サイズ */
+    border: 1px solid #ffffff; /* ボーダーの色と太さ */
+    background-color: #4cafeb;
+    color: #ffffff;
+    box-sizing: border-box; /* パディングとボーダーを含む幅 */
+    display: inline-block;
+  }
+/* フォーカス時のスタイル（ユーザーがクリックした時） */
+textarea[name="entry.340043609"]:focus {
+    outline: none; /* フォーカス時の青いアウトラインを消す */
+  }
+
+  /* プレースホルダーのスタイル */
+  textarea[name="entry.340043609"]::placeholder {
+    color: #cfe9fa; /* プレースホルダー文字色 */
+    background-color: #4cafeb;
+  }
+
+  /* 必須項目のスタイル */
+  /* input[name="entry.876649221"]:required {
+    
+  } */
+
+
+/* ラジオボタン全体のスタイル */
+.radio-buttons {
+    display: flex;
+    gap: 20px;  /* ボタン間のスペース */
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 32px;
+    color: #ffffff; /* 文字の色 */
+    font-weight: bold;
+  }
+  
+  /* ラジオボタンのラベル */
+  .radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* ラジオボタンのスタイル変更 */
+  .radio-label input[type="radio"] {
+    appearance: none;  /* デフォルトのラジオボタンのスタイルを消す */
+    width: 16px;  /* ラジオボタンの幅 */
+    height: 16px; /* ラジオボタンの高さ */
+    border-radius: 50%; /* 円形 */
+    border: 2px solid #ffffff;  /* ボーダー色 */
+    margin-right: 10px; /* ラベルとのスペース */
+    background-color: #4cafeb; /* 背景色 */
+    transition: background-color 0.3s, border 0.3s;  /* スムーズなアニメーション */
+  }
+  
+  /* ラジオボタンが選択されたときのスタイル */
+  .radio-label input[type="radio"]:checked {
+    background-color: #ffffff;  /* チェック時の背景色 */
+  }
+  
+  /* ラジオボタンにホバーしたときのスタイル */
+  .radio-label input[type="radio"]:hover {
+    border-color: #2196F3; /* ホバー時のボーダー色 */
+  }
+  
+  /* ラジオボタンのテキスト（ラベル）のスタイル */
+  .radio-label span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 5px;  /* ラジオボタンとのスペース */
+    transition: color 0.3s;
+  }
+  
+  /* ラベルがホバーされたときのテキスト色 */
+  .radio-label:hover span {
+    color: #2196F3; /* ホバー時の文字色 */
+  }
+  .question-btn-box {
+    text-align: center;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+   }
+   #submitbutton {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+width: 228px;
+background-color: #4cafeb;
+color: white;
+border: none;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 24px;
+cursor: pointer;
+border: 1px solid #FFFFFF;
+border-radius: 50px;
+left: 50%;
+display: inline-block;
+/* グラデーションのアニメーション */
+transition: background 0.5s ease, transform 0.2s ease;
+margin-bottom: 80px;
+}
+
+#submitbutton:active {
+background: linear-gradient(to right, #ff5722, #2196F3); /* オレンジから青へのグラデーション */
+transform: scale(0.95);
+}
+.attention {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+/* レスポンシブ対応 */
+
+.container {
+    box-sizing: border-box;
+    width: min(1020px, 100%);
+    padding: 0 10px;
+    margin: auto;
+  }
+  
+  .js-base {
+    display: none;
+  }
+  
+  .spreadsheets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .spreadsheets li {
+    width: 23%;
+  }
+  .pc {
+    display: inline;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .question-box {
+        width: 357px;
+        border: 4.5px solid #ffffff;
+        padding-top: 50px;
+    }
+    .koumoku {
+        font-size: 16px;
+        margin-left: 37px;
+        text-align: left;
+    }
+    .OneElement {
+        display: block;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    /* ニックネームの方 */
+    input[name="entry.876649221"] {
+        width: 283px; /* 幅を100%に設定 */
+        height: 45px;
+        display: inline-block;
+      }
+    input[name="entry.876649221"]::placeholder {
+        font-size: 14px;
+      }
+    .radio-buttons {
+        font-size: 16px;
+        margin-left: 37px;
+    }
+    textarea[name="entry.340043609"] {
+        width: 283px; 
+        height: 228px;
+      }
+    /* ↓書き込む方 */
+    textarea[name="entry.340043609"]::placeholder {
+        font-size: 14px;
+      }
+    #submitbutton {
+        font-size: 14px !important;
+        width: 150px !important;
+        height: 48px;
+        margin-bottom: 50px !important;
+    }
+    .attention {
+        font-size: 12px;
+        margin-bottom: 20px;
+        margin-left: 33px;
+        margin-right: 33px;
+    }
+    .pc {
+        display: none;
+    }
+  }
+  /* 質問箱終わり */
