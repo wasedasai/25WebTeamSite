@@ -1,0 +1,75 @@
+body{
+    background-color: #4CAFEB;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    color: #ffffff;
+}
+.title{
+    font-weight: 700;
+    text-align: center;
+}
+.title h1{
+    font-size: 96px;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+}
+.title h2{
+    font-size: 48px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: rotate(-15deg);
+}
+.title span{
+    font-size: 128px;
+    margin: 0 15px;
+}
+#start-button{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 70px;
+    color: #ffffff;
+    border: #ffffff solid 2px;
+    background-color: transparent;
+    border-radius: 200px;;
+    cursor: pointer;
+}
+#start-button p{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    line-height: 67px;
+}
+#start-button:hover {
+    background-color: #ffffff;
+    color: #4CAFEB;
+    transition: 0.3s;
+}
+@media (max-width:500px){
+    .title h1{
+        font-size: 48px;
+    }
+    .title h2{
+        font-size: 24px;
+        top: 20%;
+        left: 9%;
+    }
+    .title span{
+        font-size: 64px;
+    }
+    #start-button{
+        width: 150px;
+        height: 50px;
+    }
+    #start-button p{
+        font-size: 18px;
+        line-height: 50px;
+    }
+}
