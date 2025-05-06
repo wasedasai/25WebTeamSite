@@ -65,3 +65,37 @@ body {
     color: #4CAFEB;
     transition: 0.3s;
 }
+@media (max-width:500px){
+    .number-container{
+        top: 15%;
+        left: 8%;
+    }
+    .question-number{
+        font-size: 24px;
+    }
+    #question-number{
+        font-size: 48px;
+        margin: -5px 10px 0 10px;
+    }
+    #question-text{
+        font-size: 36px;
+        top: 43%;
+        width: 80%;
+    }
+    .button-container {
+        top: 70%;
+        margin-left: 0;
+    }
+    .button {
+        width: 100px;
+        height: 50px;
+    }
+    .button p{
+        font-size: 20px;
+        line-height: 47px;
+    }
+    .button{
+        margin: 0 40px;
+    }
+
+}
