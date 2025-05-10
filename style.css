@@ -241,6 +241,7 @@ a{
     border: 3px solid #ffffff;
     margin: 0 auto;
     padding-top: 100px;
+    margin-top: 100px;
 }
 .OneElement {
     display: flex;
@@ -431,7 +432,7 @@ color: #2196F3;
     width: 870px;
     font-size: 24px;
     color: #ffffff;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     /* margin-left: 100px; */
     
 }
@@ -460,11 +461,50 @@ color: #2196F3;
   .pc {
     display: inline;
   }
-
+  /* * ポップアップメッセージを隠す */ 
+  .hidden {
+    display: none;
+  }
+  
+  /* ポップアップメッセージを画面右下に配置 */
+  #btn4-text {
+    height: 72px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 72px;
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    opacity: 0.5;
+  }
+  
+  /* ポップアップアニメーションを3秒かけて実行 */
+  .popup-message {
+    animation: popup 3s forwards;
+  }
+  
+  @keyframes popup {
+    0% {
+      transform: translateY(15%);
+      opacity: 0;
+    }
+    10%, 90% {
+      transform: none;
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(15%);
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
   @media only screen and (max-width: 767px) {
     .question-box {
         width: 357px;
-        border: 4.5px solid #ffffff;
+        border: 3px solid #ffffff;
         padding-top: 50px;
     }
     .koumoku {
