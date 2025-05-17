@@ -112,7 +112,7 @@
             </p>
             
           </div>
-          <div class="OneElement">
+          <div class="OneElement koumoku-situmon">
             <div class="koumoku">ご質問内容　　　</div>
             <p><textarea name="entry.340043609" placeholder="ご自由にお書きください" rows="10" cols="40" maxlength="400" id="wcheck" required></textarea></p>
           </div>
@@ -121,13 +121,19 @@
           <div class="question-btn-box">
           <input type="submit" id="submitbutton" value="送信する">  
           </div>
-          
+
+          <p id="btn4-text" class="hidden">ご質問ありがとうございます！<br>
+        インスタグラムでの回答をお待ちください！</p>
+
           </form> 
-          <div class="attention">
-            ※すべてのご質問にお答えできない場合がございます。ご了承ください。<br>
-            ※ご質問へのお答えは、Instagramのチームアカウントのストーリーにて行う予定です。<br class="pc">
-            フォローしてお待ちください。
+          <div class="OneElement">
+            <div class="attention">
+                ※すべてのご質問にお答えできない場合がございます。ご了承ください。<br>
+                ※ご質問へのお答えは、Instagramのチームアカウントのストーリーにて行う予定です。
+                フォローしてお待ちください。
+            </div>  
           </div>
+          
         </div>
                 
        </section>
@@ -172,14 +178,48 @@ d3.csv("https://docs.google.com/spreadsheets/d/1SESAYBASYaFC7n1ew9SqWVXmsb83Px-Q
   d3.select("#comments").html(text);
 });
 
-
 </script>
 
-
+<script>
+    const btn4Text = document.getElementById('btn4-text');
+    const submitbutton = document.getElementById('submitbutton');
+    
+    // アニメーション終了時に隠す
+    btn4Text.addEventListener('animationend', () => {
+      btn4Text.classList.remove('popup-message');
+      btn4Text.classList.add('hidden');
+    });
+    
+    // 送信ボタンがクリックされた時の処理
+    submitbutton.addEventListener('click', (event) => {
+      const nickname = document.querySelector('input[name="entry.876649221"]');
+      const radios = document.querySelectorAll('input[name="entry.1089839963"]');
+      const textarea = document.querySelector('textarea[name="entry.340043609"]');
+    
+      const radioChecked = Array.from(radios).some(r => r.checked);
+      const nicknameFilled = nickname.value.trim() !== '';
+      const textareaFilled = textarea.value.trim() !== '';
+    
+      // 全部埋まっていないなら送信処理を止めて何もしない
+      if (!(nicknameFilled && radioChecked && textareaFilled)) {
+        event.preventDefault(); // ページリロード防止
+        return; // 処理終了
+      }
+    
+      // 条件を満たしたらポップアップ表示
+      btn4Text.classList.remove('hidden');
+      btn4Text.classList.add('popup-message');
+    
+      // ↓これはフォームsubmitそのまま続行（従来の送信処理があるなら不要にしない）
+    });
+    </script>
+    
 
   </main>
 
   <script src="script.js"></script> <!-- 外部JavaScriptファイルを指定する場合 -->
     <div class="footer"><p>©25Webteam</p></div>
+
+    
 </body>
 </html>

@@ -178,7 +178,7 @@ a{
     text-align: center;
 }
 .question-box-container h2{
-    font-size: 50px;
+    font-size: 64px;
     margin: 30px 0;
     color: #E9EFD3;
 }
@@ -244,13 +244,16 @@ a{
 }
 .question-box {
     width: 1032px;
-    border: 2px solid #ffffff;
-margin: 0 auto;
-padding-top: 100px;
+    border: 3px solid #ffffff;
+    margin: 0 auto;
+    padding-top: 100px;
+    margin-top: 100px;
 }
 .OneElement {
     display: flex;
     margin-bottom: 80px;
+    justify-content: center; /* 横方向の中央揃え */
+    align-items: center;     /* 縦方向の中央揃え */
 }
 .koumoku {
     /* background-color: #4CAF50; */
@@ -261,7 +264,7 @@ padding-top: 100px;
     font-size: 32px;
     /* margin-right: 100px;
     margin-left: 50px; */
-    margin-left: 100px;
+    /* margin-left: 100px; */
 }
 /* メインコンテンツ */
 main {
@@ -347,6 +350,7 @@ textarea[name="entry.340043609"]:focus {
     font-size: 32px;
     color: #ffffff; /* 文字の色 */
     font-weight: bold;
+    width: 614px;
   }
   
   /* ラジオボタンのラベル */
@@ -391,6 +395,9 @@ textarea[name="entry.340043609"]:focus {
   .radio-label:hover span {
     color: #2196F3; /* ホバー時の文字色 */
   }
+  .koumoku-situmon {
+    align-items: flex-start !important;
+  }
   .question-btn-box {
     text-align: center;
     font-family: "Zen Kaku Gothic New", sans-serif;
@@ -417,14 +424,23 @@ margin-bottom: 80px;
 }
 
 #submitbutton:active {
-background: linear-gradient(to right, #ff5722, #2196F3); /* オレンジから青へのグラデーション */
+background: linear-gradient(to right, #ffffff, #2196F3); /* オレンジから青へのグラデーション */
 transform: scale(0.95);
 }
+#submitbutton:hover{
+background-color: #FFFFFF;
+color: #2196F3;
+}
+.attention-box {
+    justify-content: center;
+}
 .attention {
+    width: 870px;
     font-size: 24px;
     color: #ffffff;
-    margin-bottom: 50px;
-    margin-left: 20px;
+    /* margin-bottom: 50px; */
+    /* margin-left: 100px; */
+    
 }
 /* レスポンシブ対応 */
 
@@ -451,11 +467,50 @@ transform: scale(0.95);
   .pc {
     display: inline;
   }
-
+  /* * ポップアップメッセージを隠す */ 
+  .hidden {
+    display: none;
+  }
+  
+  /* ポップアップメッセージを画面右下に配置 */
+  #btn4-text {
+    height: 72px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 72px;
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    opacity: 0.5;
+  }
+  
+  /* ポップアップアニメーションを3秒かけて実行 */
+  .popup-message {
+    animation: popup 3s forwards;
+  }
+  
+  @keyframes popup {
+    0% {
+      transform: translateY(15%);
+      opacity: 0;
+    }
+    10%, 90% {
+      transform: none;
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(15%);
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
   @media only screen and (max-width: 767px) {
     .question-box {
         width: 357px;
-        border: 4.5px solid #ffffff;
+        border: 3px solid #ffffff;
         padding-top: 50px;
     }
     .koumoku {
@@ -496,10 +551,12 @@ transform: scale(0.95);
         margin-bottom: 50px !important;
     }
     .attention {
-        font-size: 12px;
-        margin-bottom: 20px;
+        font-size: 12px ;
+        margin-bottom: 0px;
         margin-left: 33px;
         margin-right: 33px;
+        width: auto;
+        text-align: left;
     }
     .pc {
         display: none;
