@@ -1,7 +1,7 @@
 const questions = [
   { question: "2025新歓サイトを見た", id: 1 },
-  { question: "好きな人がいる", id: 2 },
-  { question: "彼氏・彼女がいる", id: 3 },
+  { question: "新しいことに挑戦したい", id: 2 },
+  { question: "プログラミングに興味がある", id: 3 },
   { question: "チーフはかっこいいと思う", id: 4 },
   { question: "Webチームに入りたい", id: 5 }
 ];
