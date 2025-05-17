@@ -182,9 +182,6 @@ a{
     margin: 30px 0;
     color: #E9EFD3;
 }
-.questions{
-    margin-top: 100px;
-}
 /* スマホ版 */
 @media (max-width:500px){
     .sensence-container{
